@@ -3,6 +3,7 @@ require 'colorize'
 @player2_lives = 3
 @turn = 1
 
+
 def play_again
   if @player1_lives && @player2_lives > 0
     player_turn
@@ -38,7 +39,6 @@ def player_turn
   end
   questions
 end
-
 
 
 def questions
@@ -79,6 +79,7 @@ def questions
   end
 end
 
+
 def wrong
   slowput("INCORRECT!!!")
   if @turn % 2 == 0
@@ -96,7 +97,6 @@ def correct
   slowput("You are correct, and live to do more math.")
   play_again
 end
-
 
 
 def slowput(text)
@@ -123,8 +123,7 @@ def slowput(text)
 end
 
 
-
-def input
+def start
   slowput("Wanna play a game?")
   sleep(0.5)
   slowput("Player 1, put in your name now!")
@@ -140,4 +139,5 @@ def input
   play_again
 end
 
-input
+
+start
